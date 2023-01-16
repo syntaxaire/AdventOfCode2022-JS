@@ -5,27 +5,28 @@ const DAY = '01';
 
 /**
  * Return a solution for the Part 1 problem statement
- * @param {string} input the input text file
+ * @param {Array.<string>} input the problem input
+ * @returns {number}
  */
-function SolvePart1() {
-  return true;
+function solvePart1(input) {
 }
 
 /**
  * Return a solution for the Part 2 problem statement
- * @param {string} input the input text file
+ * @param {Array.<string>} input the problem input
+ * @returns {number}
  */
-function SolvePart2() {
-  return true;
+function solvePart2(input) {
 }
 
-function SolveDay() {
-  const TestInput = fs.readFileSync(`day${DAY}test.txt`, 'utf8');
-  const DataInput = fs.readFileSync(`day${DAY}data.txt`, 'utf8');
-  console.log(`Day ${DAY} test case, part 1: ${SolvePart1(TestInput)}`);
-  console.log(`Day ${DAY} solution,  part 1: ${SolvePart1(DataInput)}`);
-  console.log(`Day ${DAY} test case, part 2: ${SolvePart2(TestInput)}`);
-  console.log(`Day ${DAY} solution,  part 2: ${SolvePart2(DataInput)}`);
-}
-
-SolveDay();
+/**
+ * Run the solutions for Part 1 and Part 2 with test cases and problem input
+ */
+(function solveDay() {
+  const TestInput = fs.readFileSync(`day${DAY}test.txt`, 'utf8').split('\n');
+  const DataInput = fs.readFileSync(`day${DAY}data.txt`, 'utf8').split('\n');
+  console.log(`Day ${DAY} test case, part 1: ${solvePart1(TestInput)}`);
+  console.log(`Day ${DAY} solution,  part 1: ${solvePart1(DataInput)}`);
+  console.log(`Day ${DAY} test case, part 2: ${solvePart2(TestInput)}`);
+  console.log(`Day ${DAY} solution,  part 2: ${solvePart2(DataInput)}`);
+}());
